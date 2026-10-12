@@ -53,7 +53,7 @@ Any laptop or server with:
 
 1. Clone the repository and install:
    ```
-   git clone <repo URL we send you>
+   git clone https://github.com/silly-moose/knowledge-connector-app.git
    cd knowledge-connector-app
    npm install
    npm run build
