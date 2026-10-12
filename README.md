@@ -125,6 +125,37 @@ SERVICENOW_LANGUAGE=
 SERVICENOW_CATEGORIES=
 ```
 
+### Configure KnowledgeOwl as source
+
+Step-by-step setup for a KnowledgeOwl → Genesys Cloud test sync, including the Genesys role, OAuth client and knowledge base to create: [KNOWLEDGEOWL-SETUP.md](KNOWLEDGEOWL-SETUP.md).
+
+```
+CONFIGURER=knowledgeowl
+# API key generated in KnowledgeOwl under Account > API (read access to the knowledge base is enough)
+KNOWLEDGEOWL_API_KEY=
+# Knowledge base ID (the KnowledgeOwl project_id)
+KNOWLEDGEOWL_KB_ID=
+# Public URL of the knowledge base, used for article links and relative URLs (eg. https://support.example.com)
+KNOWLEDGEOWL_SITE_URL=
+```
+
+###### Optional parameters
+```
+# API host. Default: https://app.knowledgeowl.com
+KNOWLEDGEOWL_BASE_URL=
+# Content language key. Default: en
+KNOWLEDGEOWL_LANGUAGE=
+# Comma separated article statuses to sync. Default: published,review
+KNOWLEDGEOWL_STATUSES=
+# Expand {{snippet.*}} merge codes server-side. Default: true
+KNOWLEDGEOWL_REPLACE_SNIPPETS=
+# Page size for list requests (max 100). Default: 100
+KNOWLEDGEOWL_PAGE_SIZE=
+```
+
+To preview the conversion without a Genesys Cloud organization, run
+`node dist/knowledgeowl/dry-run.js output.json` with the source configuration above.
+
 ### Configure Genesys Cloud as source
 
 ```
